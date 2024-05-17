@@ -50,6 +50,10 @@ There was a lot of styling in this project and it took me a while to name and po
 
 I learned more about flexbox and more about javascript. It was also my first time using json, and while the json format is pretty straightforward, I didn't know how to actually put that data on the page.
 
+**Update** 17/05/2024
+
+I returned to this project after a couple of months to clean up the code and correctly populate the data using the information in the json file. 
+
 ### Continued development
 
 Continued development for this project would be to make more use of json/javascript for generating and storing data.

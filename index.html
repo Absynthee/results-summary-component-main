@@ -1,269 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Results summary component</title>
 
-  <style>
-
-* {
-
-  /* Primary */
-
-  --Red: hsl(0, 100%, 67%);
-  --Green: hsl(166, 100%, 37%);
-  --Blue: hsl(234, 85%, 45%);
-  --Yellow: hsl(39, 100%, 56%);
-
-  /* Primary Alpha */
-
-  --RedAlpha: hsla(0, 100%, 67%, 0.05);
-  --GreenAlpha: hsla(166, 100%, 37%, 0.05);
-  --BlueAlpha: hsla(234, 85%, 45%, 0.05);
-  --YellowAlpha: hsla(39, 100%, 56%, 0.05);
-
-/* Gradients */
-
-  --Lightroyalblue: hsl(241, 81%, 54%);
-  --Lightslateblue: hsl(252, 100%, 67%);
-
-  --Violetblue: hsla(256, 72%, 46%, 1);
-  --Persianblue: hsla(241, 72%, 46%, 0);
-
-
-/* Neutral */
-
-  --White: hsl(0, 0%, 100%);
-  --Paleblue: hsl(221, 100%, 96%);
-  --Lightlavender: hsl(241, 100%, 89%);
-  --Darkgrayblue: hsl(224, 30%, 27%);
-
-}  
-
-html {
- background-color: var(--White);
- font-family: Hanken Grotesk, sans-serif;
- font-size: 18px;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-h1 {
-  font-size: 24px;
-  padding-bottom: 20px;
-}
-
-h2 {
-  font-size: 32px;
-  margin-top: 35px;
-  margin-bottom: -5px;
-}
-
-main {
-  background-color: var(--White);
-  display: flex;
-  flex-direction: row;
-  border-radius: 20px;
-  box-shadow: 25px 25px 50px 0px rgba(92, 92, 209, 0.1);
-  justify-content: baseline;
-}
-
-.result {
-  display: flex column;
-  background: linear-gradient(0deg, var(--Lightroyalblue) 0%, var(--Lightslateblue) 100%);
-  color: var(--White);
-  text-align: center;
-  padding: 20px 55px 35px 55px;
-  border-radius: 30px;
-  max-width: 260px;
-}
-
-#result-title {
-  color: var(--Lightlavender);
-}
-
-.result-circle {
-  display: flex column;
-  background: linear-gradient(0deg, var(--Persianblue) 0%, var(--Violetblue) 100%);
-  height: 200px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  justify-content: center;
-  margin: auto;
-}
-
-.result-number {
-  font-size: 68px;
-  font-weight: 800;
-  padding-top: 45px;
-  margin-bottom: -20px;
-}
-
-#result-maximum {
-  font-size: 17px;
-  color: var(--Lightlavender);
-  padding-inline: 0px;
-}
-
-p {
-  max-width: 285px;
-  padding-inline: auto;
-  color: var(--Lightlavender);
-}
-
-.summary {
-  background-color: var(--White);
-  color: black;
-  padding: 20px 40px 0px 40px;
-  border-radius: 25px;
-  width: 290px;
-}
-
-#summary-title {
-  margin-bottom: -5px;
-}
-
-.category {
-  display: flex;
-  flex-direction: row;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 10px;
-  padding-block: 18px;
-  padding-inline: 15px;
-  margin-block: 15px;
-}
-
-.reaction {
-  background-color: var(--RedAlpha);
-  color: var(--Red);
-}
-
-.memory {
-  background-color: var(--YellowAlpha);
-  color: var(--Yellow);
-}
-
-.verbal {
-  background-color: var(--GreenAlpha);
-  color: var(--Green);
-}
-
-.visual {
-  background-color: var(--BlueAlpha);
-  color: var(--Blue);
-}
-
-.icon {
- padding-right: 10px; 
-}
-
-.score {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.yourscore {
-  padding-inline: 10px;
-  color: var(--Darkgrayblue);
-  font-weight: 600;
-}
-
-.maxscore {
-  color: gray;
-}
-
-button {
-  background-color: var(--Darkgrayblue);
-  color: var(--White);
-  font-size: 18px;
-  text-decoration: none;
-  border: none;
-  border-radius: 30px;
-  width: 100%;
-  padding-block: 18px;
-  margin-top: 20px;
-}
-
-button:hover {
-  background: linear-gradient(0deg, var(--Lightroyalblue) 0%, var(--Lightslateblue) 100%);
-  cursor: pointer;
-}
-
-@media screen and (max-width: 700px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 24px;
-    margin-top: 35px;
-    margin-bottom: -5px;
-  }
-
-  .result {
-    padding: 20px 55px 20px 55px;
-  }
-
-  .result-circle {
-    height: 150px;
-  }
-
-  .result-number {
-    font-size: 52px;
-    padding-top: 30px;
-    margin-bottom: -20px;
-  }
-
-  #result-maximum {
-    font-size: 16px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .summary {
-    padding: 10px 30px 0px 30px;
-    width: 310px;
-  }
-
-  #summary-title {
-    margin-bottom: -10px;
-  }
-
-  .category {
-    font-size: 16px;
-    padding-block: 16px;
-  }
-
-  button {
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-}
-
-  </style>
-
 </head>
+
 <body>
   <main>
 
@@ -272,7 +24,7 @@ button:hover {
       <h1 id="result-title">Your Result</h1>
 
       <div class="result-circle">
-        <div class="result-number">76</div>
+        <div class="result-number"></div>
         <p id="result-maximum">of 100</p>
       </div>
 
@@ -284,13 +36,13 @@ button:hover {
     <div class="summary">
 
       <h1 id="summary-title">Summary</h1>
-    
+
       <div class="category reaction">
         <img class="icon" class="" src="assets/images/icon-reaction.svg" alt="">
         Reaction
         <div class="score">
           <div class="yourscore">
-            80</div>
+          </div>
           <div class="maxscore">/ 100</div>
         </div>
       </div>
@@ -300,7 +52,7 @@ button:hover {
         Memory
         <div class="score">
           <div class="yourscore">
-            92 </div>
+          </div>
           <div class="maxscore">/ 100</div>
         </div>
       </div>
@@ -310,7 +62,7 @@ button:hover {
         Verbal
         <div class="score">
           <div class="yourscore">
-            61 </div>
+          </div>
           <div class="maxscore">/ 100</div>
         </div>
       </div>
@@ -320,15 +72,54 @@ button:hover {
         Visual
         <div class="score">
           <div class="yourscore">
-            72 </div>
+          </div>
           <div class="maxscore">/ 100</div>
         </div>
       </div>
-      
+
       <button>Continue</button>
 
     </div>
 
   </main>
+
+  <script>
+
+    // Fetch the JSON data
+    fetch('styles/data.json')
+      .then(response => response.json())
+      .then(data => {
+        // Find the items in the JSON data
+        const reactionItem = data.find(item => item.category === 'Reaction');
+        const memoryItem = data.find(item => item.category === 'Memory');
+        const verbalItem = data.find(item => item.category === 'Verbal');
+        const visualItem = data.find(item => item.category === 'Visual');
+
+        // Get the necessary elements from the HTML
+        const reactionYourScore = document.querySelector('.category.reaction .yourscore');
+        const memoryYourScore = document.querySelector('.category.memory .yourscore');
+        const verbalYourScore = document.querySelector('.category.verbal .yourscore');
+        const visualYourScore = document.querySelector('.category.visual .yourscore');
+        const averageScoreElement = document.querySelector('.result .result-number');
+
+        // Calculate the total score, average score and number of categories
+        const totalScore = reactionItem.score + memoryItem.score + verbalItem.score + visualItem.score;
+        const numCategories = 4;
+        // Set the average score content
+        const averageScore = Math.floor(totalScore / numCategories);
+
+        // Set the score content using the data from the JSON
+        reactionYourScore.textContent = reactionItem.score;
+        memoryYourScore.textContent = memoryItem.score;
+        verbalYourScore.textContent = verbalItem.score;
+        visualYourScore.textContent = visualItem.score;
+        averageScoreElement.textContent = averageScore;
+
+      })
+      
+      .catch(error => console.error(error));
+
+  </script>
+
 </body>
 </html>
