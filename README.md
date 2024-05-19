@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/Absynthee/results-summary-components-main)
-- Live Site URL: [Github Pages](https://absynthee.github.io/results-summary-components-main/)
+- Solution URL: [Github](https://github.com/Absynthee/results-summary-component-main)
+- Live Site URL: [Github Pages](https://absynthee.github.io/results-summary-component-main/)
 
 ## My process
 
